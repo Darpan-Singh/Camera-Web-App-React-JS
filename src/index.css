@@ -1,13 +1,70 @@
-body {
+*
+{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+}
+.App{
+  min-height: 100vh;
+  position: relative;
+  background-color: blueviolet;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.camera {
+  position: relative;
+
+}
+
+.result {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background-color: black;
+  transition: 0.5s;
+}
+
+.result.hasPhoto{
+  left: 0;
+
+}
+
+video {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  appearance: none;
+  border: none;
+  outline: none;
+
+  padding: 9px 18px;
+  background-image: linear-gradient(to right, cyan ,rgb(241, 57, 66));
+  background-position: 0%;
+  background-size: 200%;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+button:hover{
+  background-position: 100%;
+
+}
+
+canvas {
+  width:  100%;
+  height: auto;
 }
